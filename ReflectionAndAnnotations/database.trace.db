@@ -1,0 +1,127 @@
+2020-04-17 21:16:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42102-199]
+2020-04-17 21:18:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionIdaccountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42102-199]
+2020-04-17 21:19:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42102-199]
+2020-04-17 21:22:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) [42102-199]
+2020-04-17 21:24:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); [42102-199]
+2020-04-17 21:25:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:33:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:37:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TRANSACTIONHISTORY( transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:38:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory(transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:40:17 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mohitsinghal/newWorkspace/ReflectionAndAnnotations/database.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:678)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.basicsstrong.practice.Hibernate.<init>(Hibernate.java:28)
+	at com.basicsstrong.practice.Hibernate.getConnection(Hibernate.java:24)
+	at com.basicsstrong.practice.Application.main(Application.java:13)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mohitsinghal/newWorkspace/ReflectionAndAnnotations/database.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mohitsinghal/newWorkspace/ReflectionAndAnnotations/database.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 21 more
+2020-04-17 21:40:19 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mohitsinghal/newWorkspace/ReflectionAndAnnotations/database.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:90)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2787)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:441)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:404)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3343)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:162)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:95)
+	at org.h2.engine.Database.getPageStore(Database.java:2739)
+	at org.h2.engine.Database.open(Database.java:769)
+	at org.h2.engine.Database.openDatabase(Database.java:319)
+	at org.h2.engine.Database.<init>(Database.java:313)
+	at org.h2.engine.Engine.openSession(Engine.java:69)
+	at org.h2.engine.Engine.openSession(Engine.java:201)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:178)
+	at org.h2.engine.Engine.createSession(Engine.java:161)
+	at org.h2.engine.Engine.createSession(Engine.java:31)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:336)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:169)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:148)
+	at org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:678)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at com.basicsstrong.practice.Hibernate.<init>(Hibernate.java:28)
+	at com.basicsstrong.practice.Hibernate.getConnection(Hibernate.java:24)
+	at com.basicsstrong.practice.Application.main(Application.java:13)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/Users/mohitsinghal/newWorkspace/ReflectionAndAnnotations/database.mv.db [1.4.199/7]" [50000-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:502)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	... 27 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/Users/mohitsinghal/newWorkspace/ReflectionAndAnnotations/database.mv.db [1.4.199/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:883)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
+	... 21 more
+2020-04-17 21:46:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory(transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory(transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:50:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+select * from TransactionHistory; [42102-199]
+2020-04-17 21:52:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory(transactionId,accountNumber,name,transactionType,amount) values (?,?,?,?,?); [42102-199]
+2020-04-17 21:54:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory(transactionId,accountNumber,name,transactionType,amount) values (2,1,'M','B','90'); [42102-199]
+2020-04-17 21:56:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory(transactionId,accountNumber,name,transactionType,amount) values (2,1,'M','B','90'); [42102-199]
+2020-04-17 21:59:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONHISTORY" not found; SQL statement:
+insert into TransactionHistory(transactionId,accountNumber,name,transactionType,amount) values (2,1,'M','B','90'); [42102-199]
