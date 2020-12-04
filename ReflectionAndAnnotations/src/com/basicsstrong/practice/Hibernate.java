@@ -27,7 +27,7 @@ public class Hibernate<T> {
 	}
 	
 	private Hibernate() throws SQLException, InterruptedException {
-		this.con = DriverManager.getConnection("jdbc:h2:/Users/mohitsinghal/newWorkspace/ReflectionAndAnnotations/database/practice1", "sa", "");
+		this.con = DriverManager.getConnection("jdbc:h2:./Database", "sa", "");
 	}
 
 	public void write(T t) throws IllegalArgumentException, IllegalAccessException, SQLException {
